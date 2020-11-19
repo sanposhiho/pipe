@@ -150,8 +150,9 @@ func TestPipedConfig(t *testing.T) {
 				},
 				ImageProviders: []PipedImageProvider{
 					{
-						Name: "my-dockerhub",
-						Type: "DOCKERHUB",
+						Name:         "my-dockerhub",
+						Type:         "DOCKERHUB",
+						PullInterval: Duration(time.Minute * 5),
 						DockerhubConfig: &ImageProviderDockerhubConfig{
 							Username:     "foo",
 							PasswordFile: "/etc/piped-secret/dockerhub-pass",

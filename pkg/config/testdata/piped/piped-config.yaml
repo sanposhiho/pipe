@@ -80,6 +80,7 @@ spec:
   imageProviders:
     - name: my-dockerhub
       type: DOCKERHUB
+      pullInterval: 5m
       config:
         username: foo
         passwordFile: /etc/piped-secret/dockerhub-pass
